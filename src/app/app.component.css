@@ -1,0 +1,23 @@
+
+.app {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 20% 70%;
+    grid-template-rows: 100%;
+
+    transition: 1s
+}
+
+.app-no-nav {
+    grid-template-columns: 100%;
+    transition: 1s
+}
+
+#nav-bar {
+    position: sticky;
+    top: 0px;
+    align-self: start;
+    height: 100%;
+    width: 100%;
+}

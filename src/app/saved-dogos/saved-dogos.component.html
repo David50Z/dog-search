@@ -1,0 +1,6 @@
+<p>saved-dogos works!</p>
+<div *ngIf="savedDogos.length !== 0">
+    <div *ngFor="let savedDogo of savedDogos">
+        <img src="{{savedDogo.url}}" alt="">
+    </div>
+</div>

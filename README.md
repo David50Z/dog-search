@@ -1,27 +1,9 @@
 # DogSearch
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
+Hello! This application is the begining of an improved version of dog ceo's front end website. You can get random images of dogs by breed, and sub-breed. 
 
-## Development server
+This application uses Express, Angular, and Typescript. I used Express to serve Angular components, handle the back-end, and make calls to the dog ceo API.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+To start the application, go to the dog-client folder, and run the command npm install. Then, run node server.cjs, type localhost:3000 into your browser, and you are all set!
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+I set up a test using Angular's built in testing framework, Jasmine and Karma, that will check if the front-end part of the application is appropriately making a call to the server, and getting a response from the dog-ceo API. To run said test, activate a server for both the front-end, and back-end part of this application. The test needs the server part of this application to be running on a seperate terminal. Grab up two terminals, go to the dog-client folder, and run node server.cjs on one terminal, then run ng test on the other. You should be all set. 
