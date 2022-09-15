@@ -8,6 +8,7 @@ import { DoggoImageComponent } from './doggo-image/doggo-image.component';
 import { DogSearchComponent } from './dog-search/dog-search.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { SavedDogosComponent } from './saved-dogos/saved-dogos.component';
+import { SavedDogoImageComponent } from './saved-dogo-image/saved-dogo-image.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { SavedDogosComponent } from './saved-dogos/saved-dogos.component';
     DoggoImageComponent,
     DogSearchComponent,
     NavBarComponent,
-    SavedDogosComponent
+    SavedDogosComponent,
+    SavedDogoImageComponent
   ],
   imports: [
     BrowserModule,

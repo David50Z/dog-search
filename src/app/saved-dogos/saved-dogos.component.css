@@ -1,0 +1,4 @@
+.dogos {
+    display: flex;
+    flex-direction: row;
+}
