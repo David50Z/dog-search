@@ -14,6 +14,6 @@
 
 <app-doggo-image *ngIf="dogoImg !== '' && dogoImg !== 'Breed not found (master breed does not exist)'" [src]="dogoImg"></app-doggo-image>
 
-<button type="button" (click)="saveDogo(dogoImg)" *ngIf="dogoImg !== '' && dogoImg !== 'Breed not found (master breed does not exist)'">Save this image!</button>
+<button class="saveDogo" type="button" (click)="saveDogo(dogoImg)" *ngIf="dogoImg !== '' && dogoImg !== 'Breed not found (master breed does not exist)'">Save this image!</button>
 
 <h2 id="not-found" *ngIf="dogoImg === 'Breed not found (master breed does not exist)'">Dog breed was not found. Please check your spelling</h2>

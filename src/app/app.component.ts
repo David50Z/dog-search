@@ -14,6 +14,8 @@ export class AppComponent {
 
   noNav = false
 
+  hamburgerDeg = 90
+
   rightSide = 100 - this.menu
 
   page = 'search-dogo'
@@ -32,6 +34,16 @@ export class AppComponent {
       //this.noNav = !this.noNav
       //console.log(this.noNav)
     }, 2000);
+  }
+
+  toggleNav() {
+    this.noNav = !this.noNav
+
+    if(this.hamburgerDeg === 90) {
+      this.hamburgerDeg = 0
+    } else {
+      this.hamburgerDeg = 90
+    }
   }
 
   setPage(newPage: string) {

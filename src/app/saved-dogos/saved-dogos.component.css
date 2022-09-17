@@ -1,4 +1,12 @@
 .dogos {
     display: flex;
     flex-direction: row;
+    flex-flow: row wrap;
+}
+
+.no-dogo {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }

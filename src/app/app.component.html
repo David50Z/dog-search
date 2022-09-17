@@ -1,4 +1,12 @@
-<!--<span class="content">dog-search app is running!</span>-->
+<span class="content">dog-search app is running!</span>
+
+<!--<div class="hamburger" (click)="toggleNav()">
+    <div class="hamburger-items" [ngStyle]="{'transform': 'rotate(' + hamburgerDeg + 'deg)'}">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+</div>-->
 
 <div class="app" [class.app-no-nav]="noNav === true">
     <div id="nav-bar" *ngIf="noNav === false" #newPage>
@@ -7,5 +15,6 @@
     <div id="page">
         <app-dog-search *ngIf="page === 'search-dogo'"></app-dog-search>
         <app-saved-dogos *ngIf="page === 'saved-dogos'"></app-saved-dogos>
+        <app-search-multiple-dogos *ngIf="page === 'search-multiple-dogos'"></app-search-multiple-dogos>
     </div>
 </div>

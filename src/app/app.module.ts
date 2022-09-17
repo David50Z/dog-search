@@ -3,12 +3,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http'
 
+
+
 import { AppComponent } from './app.component';
 import { DoggoImageComponent } from './doggo-image/doggo-image.component';
 import { DogSearchComponent } from './dog-search/dog-search.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { SavedDogosComponent } from './saved-dogos/saved-dogos.component';
 import { SavedDogoImageComponent } from './saved-dogo-image/saved-dogo-image.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SearchMultipleDogosComponent } from './search-multiple-dogos/search-multiple-dogos.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +21,14 @@ import { SavedDogoImageComponent } from './saved-dogo-image/saved-dogo-image.com
     DogSearchComponent,
     NavBarComponent,
     SavedDogosComponent,
-    SavedDogoImageComponent
+    SavedDogoImageComponent,
+    SearchMultipleDogosComponent
   ],
   imports: [
     BrowserModule,
     FormsModule, ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

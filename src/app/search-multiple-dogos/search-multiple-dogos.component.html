@@ -1,0 +1,14 @@
+<form [formGroup]="submitForm" id="form" action="">
+    <h2>Search for a type of dog!</h2>
+    <input formControlName="dogo" type="text" placeholder="Example: cattledog australian">
+    <button type="submit" (click)="dogoCall(submitForm.value.dogo)">Submit</button>
+</form>
+
+<div class="dogos" *ngIf="dogoImgs.length > 0 && dogoImgs[0] !=='Breed not found (master breed does not exist)'">
+    <div *ngFor="let dogoImg of dogoImgs" class="dog-continaer">
+        <app-saved-dogo-image [src]="dogoImg"></app-saved-dogo-image>
+        <button type="button" (click)="saveDogo(dogoImg)">Add dogo!</button>
+    </div>
+</div>
+
+<h1 class="no-dogo" *ngIf="dogoImgs[0] === 'Breed not found (master breed does not exist)'">Sorry! Not found.</h1>

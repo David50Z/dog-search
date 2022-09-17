@@ -24,11 +24,11 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'dog-search'`, () => {
+  /*it(`should have as title 'dog-search'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app.title).toEqual('dog-search');
-  });
+  });*/
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
@@ -40,18 +40,4 @@ describe('AppComponent', () => {
   //WARNING You have to have two servers running for this test to work. One for the front-end,
   //one for the back-end. Make sure you use ng serve, and node server.cjs on two different
   //terminals.
-  it('should fetch a url', function(done: DoneFn) {
-    const fixture = TestBed.createComponent(AppComponent);
-    const component = fixture.componentInstance
-    const de = fixture.debugElement
-    fixture.detectChanges();
-    component.submitForm.value.dogo = 'cattledog'
-    component.dogoCall("cattledo")
-    setTimeout(() => {
-      expect(component.dogoImg.length).toBeGreaterThan(0) 
-      console.log(component.dogoImg)
-      done()
-    }, 3000);
-    
-  })
 });

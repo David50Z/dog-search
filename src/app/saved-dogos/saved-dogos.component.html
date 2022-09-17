@@ -1,6 +1,9 @@
-<p>saved-dogos works!</p>
 <div *ngIf="savedDogos.length !== 0" class="dogos">
     <div *ngFor="let savedDogo of savedDogos">
         <app-saved-dogo-image [src]="savedDogo.url"></app-saved-dogo-image>
     </div>
+</div>
+
+<div *ngIf="savedDogos.length === 0" class="no-dogo">
+    <h1>No saved dogos :(</h1>
 </div>

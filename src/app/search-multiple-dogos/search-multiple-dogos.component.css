@@ -1,0 +1,32 @@
+#form {
+    text-align: center;
+    position: relative;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(17, 108, 218)
+}
+
+.dogos {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    margin-top: 50px;
+}
+
+.dogo-container {
+}
+
+.no-dogo {
+    text-align: center;
+    position: relative;
+    top: 40%;
+    transform: translateY(-40%);
+}
+
+button {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -20px
+}
