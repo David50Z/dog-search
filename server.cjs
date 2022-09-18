@@ -130,4 +130,22 @@ server.get('/api/all/:dogo', async (req, res) => {
 	res.json(response)
 })
 
+server.get('/api/breeds/', async (req, res) => {
+	const options = {
+		"method": "GET",
+	}
+
+//affenpinscher
+	const response = await fetch(`https://dog.ceo/api/breeds/list/all`, options)
+		.then(res => res.json())
+		.catch(e => {
+			console.error({
+				"message": "woops!",
+				error: e,
+			})
+		})
+	//console.log('RESPONSE: ', response)
+	res.json(response)
+})
+
 server.listen(3000, () => console.log('App Running on port 3000'));

@@ -1,0 +1,5 @@
+<div class="matching-breeds">
+    <div class="matching-breed-items">
+        <h3 *ngFor="let breed of breeds" (click)="dogoCall.emit(breed)">{{breed}}</h3>
+    </div>
+</div>

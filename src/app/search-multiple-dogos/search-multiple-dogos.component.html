@@ -7,7 +7,7 @@
 <div class="dogos" *ngIf="dogoImgs.length > 0 && dogoImgs[0] !=='Breed not found (master breed does not exist)'">
     <div *ngFor="let dogoImg of dogoImgs" class="dog-continaer">
         <app-saved-dogo-image [src]="dogoImg"></app-saved-dogo-image>
-        <button type="button" (click)="saveDogo(dogoImg)">Add dogo!</button>
+        <button type="button" class="add-dogo" (click)="saveDogo(dogoImg)">Add dogo!</button>
     </div>
 </div>
 

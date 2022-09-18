@@ -8,6 +8,9 @@
     Search for a type of dog!</h2>
     <input formControlName="dogo" type="text" placeholder="Example: cattledog australian">
     <button type="submit" (click)="dogoCall(submitForm.value.dogo)">Submit</button>
+    <div class="matching-breeds">
+        <app-matching-breeds *ngIf="submitForm.value.dogo" [inputField]="submitForm.value.dogo" (dogoCall)="dogoCall($event)"></app-matching-breeds>
+    </div>
 </form>
 
 <!--<img *ngIf="dogoImg !== ''" src="https://images.dog.ceo/breeds/affenpinscher/n02110627_13221.jpg" alt="">-->

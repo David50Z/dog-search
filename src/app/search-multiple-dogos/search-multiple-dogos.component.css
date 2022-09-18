@@ -24,7 +24,7 @@
     transform: translateY(-40%);
 }
 
-button {
+.add-dogo {
     position: relative;
     left: 50%;
     transform: translateX(-50%);

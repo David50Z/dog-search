@@ -19,7 +19,7 @@ export class DogSearchComponent implements OnInit {
   color = 'rgb(17, 108, 218)'
 
   submitForm = this.formBuilder.group({
-    dogo: ''
+    dogo: ""
   })
 
   ROOT_URL = 'http://localhost:3000/api'
@@ -60,6 +60,9 @@ export class DogSearchComponent implements OnInit {
         this.dogoImg = data.message
         //console.log(data)
         //console.log(this.dogoImg + 'hello')
+        if(this.dogoImg !== 'Breed not found (master breed does not exist)') {
+          this.submitForm.value.dogo = ""
+        }
         return this.dogoImg
       })
   }

@@ -13,6 +13,7 @@ import { SavedDogosComponent } from './saved-dogos/saved-dogos.component';
 import { SavedDogoImageComponent } from './saved-dogo-image/saved-dogo-image.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchMultipleDogosComponent } from './search-multiple-dogos/search-multiple-dogos.component';
+import { MatchingBreedsComponent } from './matching-breeds/matching-breeds.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SearchMultipleDogosComponent } from './search-multiple-dogos/search-mul
     NavBarComponent,
     SavedDogosComponent,
     SavedDogoImageComponent,
-    SearchMultipleDogosComponent
+    SearchMultipleDogosComponent,
+    MatchingBreedsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,23 @@
+.matching-breeds {
+    position: absolute;
+    left: 46%;
+    transform: translateX(-46%);
+    background: white;
+    width: 200px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.matching-breed-items {
+    position: relative;
+    height: 100%;
+}
+
+h3 {
+    position: relative;
+    margin: 5px;
+    padding: 20px;
+    border-top: 1px solid black;
+}
