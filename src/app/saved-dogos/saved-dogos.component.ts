@@ -16,6 +16,9 @@ export class SavedDogosComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    for(let i = 0; i < 15; i++) {
+      this.savedDogos.push({url: 'https://images.dog.ceo/breeds/chow/n02112137_7645.jpg', id: 73})
+    }
   }
 
 }

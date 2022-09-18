@@ -4,8 +4,7 @@ body {
     background-image: url("/assets/imgs/broken glass background.jpg");
     padding: 0;
     margin: 0;
-    height: 100%;
-    width: 100%;
+    
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
