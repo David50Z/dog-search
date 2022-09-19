@@ -10,6 +10,8 @@ import { firstValueFrom } from 'rxjs';
 })
 export class AppComponent {
 
+  matchingBreeds: boolean = false
+
   menu = 30
 
   noNav = false
@@ -49,6 +51,25 @@ export class AppComponent {
   setPage(newPage: string) {
     this.page = newPage
     console.log('parent function ran')
+  }
+
+  toggleBreeds(event: any) {
+    this.matchingBreeds = true
+    //console.log(this.matchingBreeds)
+    let condition = event.path
+
+    //console.log(String(condition[0]))
+
+    if(String(condition[0]) === '[object HTMLInputElement]') {
+      this.matchingBreeds = true
+      console.log('matching breeds on')
+      console.log(String(condition[0]))
+
+    } else {
+      this.matchingBreeds = false
+      console.log('matching breeds off')
+      console.log(String(condition[0]))
+    }
   }
 
 }

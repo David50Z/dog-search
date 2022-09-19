@@ -13,9 +13,15 @@
         <app-nav-bar (setPage)="setPage($event)"></app-nav-bar>
     </div>
     <div id="page">
-        <app-dog-search *ngIf="page === 'search-dogo'"></app-dog-search>
+        <app-dog-search *ngIf="page === 'search-dogo'"
+         (toggleBreeds)="toggleBreeds($event)"
+         [matchingBreeds]="matchingBreeds"
+         ></app-dog-search>
         <app-saved-dogos *ngIf="page === 'saved-dogos'"></app-saved-dogos>
-        <app-search-multiple-dogos *ngIf="page === 'search-multiple-dogos'"></app-search-multiple-dogos>
+        <app-search-multiple-dogos *ngIf="page === 'search-multiple-dogos'"
+         (toggleBreeds)="toggleBreeds($event)"
+         [matchingBreeds]="matchingBreeds"
+         ></app-search-multiple-dogos>
     </div>
 </div>
 

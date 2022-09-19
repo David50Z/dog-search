@@ -4,7 +4,8 @@
     top: 30px;
     left: 50%;
     transform: translateX(-50%);
-    color: rgb(17, 108, 218)
+    color: rgb(17, 108, 218);
+    z-index: 10;
 }
 
 h2 {
@@ -58,3 +59,8 @@ form {
     font-size: large;
 }
 
+.matching-breeds {
+    z-index: 10;
+    position: relative;
+    top: -5px;
+}

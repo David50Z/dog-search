@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
@@ -10,6 +10,10 @@ import { UpdateSavedDogosService } from '../services/update-saved-dogos.service'
   styleUrls: ['./search-multiple-dogos.component.css']
 })
 export class SearchMultipleDogosComponent implements OnInit {
+
+  @Input() matchingBreeds!: boolean
+
+  @Output() toggleBreeds = new EventEmitter()
 
   dogoImgs: string[] = /*['https://images.dog.ceo/breeds/chow/n02112137_7645.jpg', 'https://images.dog.ceo/breeds/chow/n02112137_7645.jpg']*/[]
 
@@ -60,5 +64,24 @@ export class SearchMultipleDogosComponent implements OnInit {
   saveDogo(url: string) {
     this.updateSavedDogos.saveDogo(url)
   }
+
+  /*toggleBreeds(event: any) {
+    this.matchingBreeds = true
+    //console.log(this.matchingBreeds)
+    let condition = event.path
+
+    //console.log(String(condition[0]))
+
+    if(String(condition[0]) === '[object HTMLInputElement]') {
+      this.matchingBreeds = true
+      console.log('matching breeds on')
+      console.log(String(condition[0]))
+
+    } else {
+      this.matchingBreeds = false
+      console.log('matching breeds off')
+      console.log(String(condition[0]))
+    }
+  }*/
 
 }

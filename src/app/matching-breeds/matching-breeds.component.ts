@@ -32,9 +32,9 @@ export class MatchingBreedsComponent implements OnInit {
         }
         let breed = breeds[i]
         let condition = breed.includes(this.inputField.toLocaleLowerCase())
-        console.log(condition)
+        //console.log(condition)
         if(condition) {
-          console.log(i)
+          //console.log(i)
           first5.push(breeds[i])
         }
       }
@@ -42,7 +42,7 @@ export class MatchingBreedsComponent implements OnInit {
 
     
       
-      console.log(first5[1])
+      //console.log(first5[1])
       if(first5) {
         this.breeds = first5
       } else {
@@ -66,14 +66,14 @@ export class MatchingBreedsComponent implements OnInit {
 
       for(let i = 0; i < breeds.length; i++) {
         if(first5.length > 5) {
-          console.log('all full up')
+          //console.log('all full up')
           break
         }
         let breed = breeds[i]
         let condition = breed.includes(this.inputField.toLocaleLowerCase())
-        console.log(condition)
+        //console.log(condition)
         if(condition) {
-          console.log(i)
+          //console.log(i)
           first5.push(breeds[i])
         }
       }
@@ -81,7 +81,7 @@ export class MatchingBreedsComponent implements OnInit {
 
     
       
-      console.log(first5[1])
+      //console.log(first5[1])
       if(first5) {
         this.breeds = first5
       } else {
