@@ -1,23 +1,26 @@
 <div class="dog-search" (click)="toggleBreeds.emit($event)">
-<h1>Hello user!</h1>
-<h2 id="description">Hello! This app is basically an improved version of dog ceo's searchbar. Enter the name of whatever dog breed you'd like, and if you want to search by sub breed, type the dog breed first, add a space, then type in the sub-breed name!</h2>
+    <h1>Hello user!</h1>
+    <h2 id="description">Hello! This app is basically an improved version of dog ceo's searchbar. Enter the name of whatever dog breed you'd like, and if you want to search by sub breed, type the dog breed first, add a space, then type in the sub-breed name!</h2>
 
-<form [formGroup]="submitForm" id="form" action="">
-    <h2 
-    [ngStyle]="{'color': color}" >
-    Search for a type of dog!</h2>
-    <input formControlName="dogo" type="text" placeholder="Example: cattledog australian" (click)="toggleBreeds.emit($event)">
-    <button type="submit" (click)="dogoCall(submitForm.value.dogo)">Submit</button>
-    <div class="matching-breeds">
-        <app-matching-breeds *ngIf="submitForm.value.dogo && matchingBreeds" [inputField]="submitForm.value.dogo" (dogoCall)="dogoCall($event)"></app-matching-breeds>
-    </div>
-</form>
+    <form [formGroup]="submitForm" id="form" action="">
+        <h2 
+        [ngStyle]="{'color': color}" >
+        Search for a type of dog!</h2>
+        <input formControlName="dogo" type="text" placeholder="Example: cattledog australian" (click)="toggleBreeds.emit($event)">
+        <button type="submit" (click)="dogoCall(submitForm.value.dogo)">Submit</button>
+        <div class="matching-breeds">
+            <app-matching-breeds *ngIf="submitForm.value.dogo && matchingBreeds" [inputField]="submitForm.value.dogo" (dogoCall)="dogoCall($event)"></app-matching-breeds>
+        </div>
+    </form>
 
-<!--<img *ngIf="dogoImg !== ''" src="https://images.dog.ceo/breeds/affenpinscher/n02110627_13221.jpg" alt="">-->
+    <!--<img *ngIf="dogoImg !== ''" src="https://images.dog.ceo/breeds/affenpinscher/n02110627_13221.jpg" alt="">-->
 
-<app-doggo-image *ngIf="dogoImg !== '' && dogoImg !== 'Breed not found (master breed does not exist)'" [src]="dogoImg"></app-doggo-image>
+    <app-doggo-image *ngIf="dogoImg !== '' && dogoImg !== 'Breed not found (master breed does not exist)'"
+    [src]="dogoImg"
+    (activateFullImg)="activateFullImg.emit($event)"
+    ></app-doggo-image>
 
-<button class="saveDogo" type="button" (click)="saveDogo(dogoImg)" *ngIf="dogoImg !== '' && dogoImg !== 'Breed not found (master breed does not exist)'">Save this image!</button>
+    <button class="saveDogo" type="button" (click)="saveDogo(dogoImg)" *ngIf="dogoImg !== '' && dogoImg !== 'Breed not found (master breed does not exist)'">Save this image!</button>
 
-<h2 id="not-found" *ngIf="dogoImg === 'Breed not found (master breed does not exist)'">Dog breed was not found. Please check your spelling</h2>
+    <h2 id="not-found" *ngIf="dogoImg === 'Breed not found (master breed does not exist)'">Dog breed was not found. Please check your spelling</h2>
 </div>

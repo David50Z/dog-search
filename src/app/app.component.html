@@ -16,12 +16,28 @@
         <app-dog-search *ngIf="page === 'search-dogo'"
          (toggleBreeds)="toggleBreeds($event)"
          [matchingBreeds]="matchingBreeds"
+         (activateFullImg)="activateFullImg($event)"
          ></app-dog-search>
-        <app-saved-dogos *ngIf="page === 'saved-dogos'"></app-saved-dogos>
+         
+        <app-saved-dogos *ngIf="page === 'saved-dogos'"
+        (activateFullImg)="activateFullImg($event)"
+        ></app-saved-dogos>
+
         <app-search-multiple-dogos *ngIf="page === 'search-multiple-dogos'"
          (toggleBreeds)="toggleBreeds($event)"
          [matchingBreeds]="matchingBreeds"
+         (activateFullImg)="activateFullImg($event)"
          ></app-search-multiple-dogos>
+
+         
+        
+        
     </div>
+
+    <app-full-image class="full-image" 
+    *ngIf="fullImage" 
+    [url]="imgUrl" class="full-image"
+    (disactivateFullImg)="disactivateFullImg()"
+    ></app-full-image>
 </div>
 

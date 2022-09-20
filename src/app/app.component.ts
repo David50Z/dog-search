@@ -10,6 +10,10 @@ import { firstValueFrom } from 'rxjs';
 })
 export class AppComponent {
 
+  fullImage: boolean = false
+
+  imgUrl!: string | Event
+
   matchingBreeds: boolean = false
 
   menu = 30
@@ -70,6 +74,17 @@ export class AppComponent {
       console.log('matching breeds off')
       console.log(String(condition[0]))
     }
+  }
+
+  activateFullImg(url: string | Event) {
+    this.fullImage = true
+    this.imgUrl = url
+    console.log('activateFullImg ran')
+    console.log(this.fullImage)
+  }
+
+  disactivateFullImg() {
+    this.fullImage = false
   }
 
 }

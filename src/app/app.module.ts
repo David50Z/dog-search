@@ -14,6 +14,7 @@ import { SavedDogoImageComponent } from './saved-dogo-image/saved-dogo-image.com
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchMultipleDogosComponent } from './search-multiple-dogos/search-multiple-dogos.component';
 import { MatchingBreedsComponent } from './matching-breeds/matching-breeds.component';
+import { FullImageComponent } from './full-image/full-image.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MatchingBreedsComponent } from './matching-breeds/matching-breeds.compo
     SavedDogosComponent,
     SavedDogoImageComponent,
     SearchMultipleDogosComponent,
-    MatchingBreedsComponent
+    MatchingBreedsComponent,
+    FullImageComponent
   ],
   imports: [
     BrowserModule,

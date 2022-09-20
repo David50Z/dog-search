@@ -64,3 +64,7 @@ form {
     position: relative;
     top: -5px;
 }
+
+.full-image {
+    position: absolute;
+}

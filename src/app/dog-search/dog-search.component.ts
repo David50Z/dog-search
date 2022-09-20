@@ -16,6 +16,10 @@ export class DogSearchComponent implements OnInit {
 
   @Output() toggleBreeds = new EventEmitter()
 
+  @Output() activateFullImg = new EventEmitter()
+
+  fullImage: boolean = false
+
   title = 'dog-search';
 
   dogoImg = "https://images.dog.ceo/breeds/chow/n02112137_7645.jpg"
@@ -112,6 +116,11 @@ export class DogSearchComponent implements OnInit {
       this.matchingBreeds = false
       console.log('matching breeds off')
     }
+  }*/
+
+  /*activateFullImg() {
+    this.fullImage = true
+    console.log('activateFullImg ran')
   }*/
 
 }

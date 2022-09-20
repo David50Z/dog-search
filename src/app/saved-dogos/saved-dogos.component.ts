@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 import { UpdateSavedDogosService } from '../services/update-saved-dogos.service';
 
@@ -8,6 +8,8 @@ import { UpdateSavedDogosService } from '../services/update-saved-dogos.service'
   styleUrls: ['./saved-dogos.component.css']
 })
 export class SavedDogosComponent implements OnInit {
+
+  @Output() activateFullImg = new EventEmitter
 
   savedDogos = this.updateSavedDogos.savedDogos
 
