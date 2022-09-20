@@ -1,0 +1,22 @@
+h1 {
+    text-align: center;
+    color: rgb(17, 108, 218);
+    font-family: 'Playfair Display', serif;
+}
+
+h3 {
+    margin-left: 20%;
+    margin-right: 20%;
+    font-family: 'Playfair Display', serif;
+    line-height: 40px;
+}
+
+#dogo-gif {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 40%;
+    width: 40%;
+    top: 50px;
+    padding-bottom: 30px;
+}

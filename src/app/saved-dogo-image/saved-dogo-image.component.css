@@ -9,6 +9,8 @@ img {
     position: relative;
     padding: 0px;
     margin: 0px;
+    cursor: pointer;
+
 }
 
 #img-container {

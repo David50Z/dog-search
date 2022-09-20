@@ -24,7 +24,7 @@ export class AppComponent {
 
   rightSide = 100 - this.menu
 
-  page = 'search-dogo'
+  page = 'description'
 
   constructor(
     private formBuilder: FormBuilder,

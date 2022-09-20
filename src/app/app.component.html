@@ -8,11 +8,14 @@
     </div>
 </div>-->
 
-<div class="app" [class.app-no-nav]="noNav === true">
+<div class="app" [class.full-image]="fullImage === true">
     <div id="nav-bar" *ngIf="noNav === false" #newPage>
         <app-nav-bar (setPage)="setPage($event)"></app-nav-bar>
     </div>
     <div id="page">
+
+        <app-description *ngIf="page === 'description'"></app-description>
+
         <app-dog-search *ngIf="page === 'search-dogo'"
          (toggleBreeds)="toggleBreeds($event)"
          [matchingBreeds]="matchingBreeds"

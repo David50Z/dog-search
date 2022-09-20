@@ -1,6 +1,6 @@
 <div (click)="toggleBreeds.emit($event)" class="search-multiple-dogos">
     <form [formGroup]="submitForm" id="form" action="">
-        <h2>Search for a type of dog!</h2>
+        <h2>Search for multiple dogos!</h2>
         <input formControlName="dogo" type="text" placeholder="Example: cattledog australian" (click)="toggleBreeds.emit($event)">
         <button type="submit" (click)="dogoCall(submitForm.value.dogo)">Submit</button>
         

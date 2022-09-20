@@ -17,7 +17,7 @@ export class SearchMultipleDogosComponent implements OnInit {
 
   @Output() activateFullImg = new EventEmitter()
 
-  dogoImgs: string[] = ['https://images.dog.ceo/breeds/chow/n02112137_7645.jpg', 'https://images.dog.ceo/breeds/chow/n02112137_7645.jpg']
+  dogoImgs: string[] = /*['https://images.dog.ceo/breeds/chow/n02112137_7645.jpg', 'https://images.dog.ceo/breeds/chow/n02112137_7645.jpg']*/[]
 
   submitForm = this.formBuilder.group({
     dogo: ''
