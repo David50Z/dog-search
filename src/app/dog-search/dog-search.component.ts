@@ -22,7 +22,7 @@ export class DogSearchComponent implements OnInit {
 
   title = 'dog-search';
 
-  dogoImg = "https://images.dog.ceo/breeds/chow/n02112137_7645.jpg"
+  dogoImg = /*"https://images.dog.ceo/breeds/chow/n02112137_7645.jpg"*/"https://www.princeton.edu/sites/default/files/styles/half_2x/public/images/2022/02/KOA_Nassau_2697x1517.jpg?itok=iQEwihUn"
 
   color = 'rgb(17, 108, 218)'
 

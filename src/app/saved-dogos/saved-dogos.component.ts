@@ -21,6 +21,14 @@ export class SavedDogosComponent implements OnInit {
     /*for(let i = 0; i < 15; i++) {
       this.savedDogos.push({url: 'https://images.dog.ceo/breeds/chow/n02112137_7645.jpg', id: 73})
     }*/
+
+    for(let i = 0; i < this.savedDogos.length; i++) {
+      console.log(this.savedDogos[i].id)
+    }
+  }
+
+  removeDogo(id: number) {
+    this.updateSavedDogos.removeDogo(id)
   }
 
 }

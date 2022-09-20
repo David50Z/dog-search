@@ -1,6 +1,9 @@
 <div *ngIf="savedDogos.length !== 0" class="dogos">
     <div *ngFor="let savedDogo of savedDogos">
         <app-saved-dogo-image [src]="savedDogo.url" (activateFullImg)="activateFullImg.emit($event)"></app-saved-dogo-image>
+        <div class="remove-button">
+            <button (click)="removeDogo(savedDogo.id)">remove</button>
+        </div>
     </div>
 </div>
 
