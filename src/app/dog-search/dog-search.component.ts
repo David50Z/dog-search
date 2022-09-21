@@ -56,10 +56,10 @@ export class DogSearchComponent implements OnInit {
     }
 
     let dogo = dogoArr.join("")
-    console.log(`https://dog-search-app.herokuapp.com/client/api/${dogo.toLocaleLowerCase()}`)
+    console.log(`https://dog-search-app.herokuapp.com/api/${dogo.toLocaleLowerCase()}`)
 
     //console.log(`http://localhost:3000/api/${this.submitForm.value.dogo}`)
-    fetch(`https://dog-search-app.herokuapp.com/client/api/${dogo.toLocaleLowerCase()}`)
+    fetch(`https://dog-search-app.herokuapp.com/api/${dogo.toLocaleLowerCase()}`)
       .then(res => {
         //console.log(`http://localhost:3000/api/${this.submitForm.value.dogo}`)
         return res.json()
