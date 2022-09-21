@@ -55,18 +55,22 @@ app.use(async (ctx, next) => {
 const express = require('express');
 const path = require('path');
 const fetch = require('node-fetch')
-//import fetch from 'node-fetch';
-//let fetch = await import('node-fetch')
+let port = process.env.PORT || 3000
+console.log(port)
 
-const cors = require("cors")
+const serverless = require('serverless-http')
+
+const cors = require("cors");
+const { appendFile } = require('fs');
 
 const server = express();
+const router = express.Router()
 
-server.use(express.static(path.join(__dirname, 'dist/dog-search')));
+server.use(express.static(path.join(__dirname, './dist/dog-search')));
 server.use(cors())
 
 server.get('/client', async (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'dist/dog-search', 'index.html'))
+    res.sendFile(path.resolve(__dirname, './dist/dog-search', 'index.html'))
 	console.log('client section')
 });
 
@@ -148,4 +152,8 @@ server.get('/api/breeds/', async (req, res) => {
 	res.json(response)
 })
 
-server.listen(3000, () => console.log('App Running on port 3000'));
+module.exports.handler = serverless(server)
+
+//server.use('/.netlify/functions/server', router)
+
+server.listen(port, () => console.log('App Running on port 3000'));
