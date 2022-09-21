@@ -69,7 +69,7 @@ export class DogSearchComponent implements OnInit {
         //console.log(data)
         //console.log(this.dogoImg + 'hello')
         if(this.dogoImg !== 'Breed not found (master breed does not exist)') {
-          this.submitForm.value.dogo = ""
+          //this.submitForm.value.dogo = ""
         }
         return this.dogoImg
       })
