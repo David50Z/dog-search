@@ -43,10 +43,10 @@ export class SearchMultipleDogosComponent implements OnInit {
     }
 
     let dogo = dogoArr.join("")
-    console.log(`http://localhost:3000/api/all/${dogo.toLocaleLowerCase()}`)
+    console.log(`https://dog-search-app.herokuapp.com/client/api/all/${dogo.toLocaleLowerCase()}`)
 
     //console.log(`http://localhost:3000/api/${this.submitForm.value.dogo}`)
-    fetch(`http://localhost:3000/api/all/${dogo.toLocaleLowerCase()}`)
+    fetch(`https://dog-search-app.herokuapp.com/client/api/all/${dogo.toLocaleLowerCase()}`)
       .then(res => {
         //console.log(`http://localhost:3000/api/${this.submitForm.value.dogo}`)
         return res.json()
