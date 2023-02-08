@@ -1,57 +1,3 @@
-/*import Koa from 'koa';
-import Router from '@koa/router';
-import cors from '@koa/cors';
-import fetch from 'isomorphic-fetch';
-
-const app = new Koa();
-const router = new Router();
-const port = 4200;*/
-
-// const express = require('express')
-// const app = express()
-// port = 3001
-// const path = require('path')
-// const http = require('http')
-
-//app.use(cors({origin: '*'}));
-
-/*app.get('/api', (req, res) => {
-	res.send('Hello World!')
-});*/
-
-// app.use(express.static(__dirname + '../dist/dog-search'))
-
-// //app.set('view engine', 'pug')
-
-// app.get('/client', (req, res) => {
-// 	var options = {
-// 		root: path.join(__dirname, 'dist/dog-search')
-// 	}
-
-// 	res.sendFile('index.html', options)
-// });
-
-/*app.use(async (ctx, next) => {
-	await next();
-	const rt = ctx.response.get('X-Response-Time');
-	console.log(`${ctx.method} ${ctx.url} - ${rt}`);
-});
-
-app.use(async (ctx, next) => {
-	const start = Date.now();
-	await next();
-	const ms = Date.now() - start;
-	ctx.set('X-Response-Time', `${ms}ms`);
-});*/
-
-//app.use(router.routes());
-
-// const server = http.createServer(app)
-
-// app.listen(port, () => {
-// 	console.log(`Server running on http://localhost:${port}`);
-// });
-
 const express = require('express');
 const path = require('path');
 const fetch = require('node-fetch')
@@ -120,9 +66,9 @@ server.get('/api/all/:dogo', async (req, res) => {
 
 	let dogo = dogoArr.join("")
 
-	console.log(`https://dog.ceo/api/breed/${req.params.dogo}/images/`)
+	console.log(`https://dog.ceo/api/breed/${req.params.dogo}/images`)
 //affenpinscher
-	const response = await fetch(`https://dog.ceo/api/breed/${dogo}/images/`, options)
+	const response = await fetch(`https://dog.ceo/api/breed/${dogo}/images`, options)
 		.then(res => res.json())
 		.catch(e => {
 			console.error({
